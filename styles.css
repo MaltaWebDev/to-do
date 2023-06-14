@@ -10,7 +10,6 @@
   padding-top: 10rem;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   font-family: sans-serif;
   color: #1e1927;
@@ -50,5 +49,20 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.todos {
+  font-size: 1.5rem;
+}
+
+.todos button {
+  text-transform: uppercase;
+  background-color: #ff8058;
+  color: #1e1927;
+  letter-spacing: 1.2px;
+  font-size: 0.5rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
 }
