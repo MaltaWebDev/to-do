@@ -1,10 +1,14 @@
 const btn = document.getElementById("btn");
+const todosDiv = document.getElementsByClassName("todos")[0];
 
 btn.addEventListener("click", () => {
   console.log("clicked");
   const newTodo = document.createElement("p");
   const todo = document.createTextNode("test entry successful!");
-  const wrapper = document.getElementsByClassName("wrapper")[0];
+  const newButton = document.createElement("button");
+  const btnText = document.createTextNode("DEL");
   newTodo.appendChild(todo);
-  wrapper.appendChild(newTodo);
+  newButton.appendChild(btnText);
+  todosDiv.appendChild(newTodo);
+  todosDiv.appendChild(newButton);
 });
