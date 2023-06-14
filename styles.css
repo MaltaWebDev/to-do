@@ -60,6 +60,13 @@
   font-size: 1.25rem;
 }
 
+.todos div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
 .todos button {
   text-transform: uppercase;
   background-color: #ff8058;
