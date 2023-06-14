@@ -1,5 +1,5 @@
 const btn = document.getElementById("btn");
-const todosDiv = document.getElementsById("todos")[0];
+const todosDiv = document.getElementById("todos");
 const input = document.getElementById("todo");
 
 btn.addEventListener("click", () => {
