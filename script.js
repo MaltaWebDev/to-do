@@ -1,16 +1,26 @@
 const btn = document.getElementById("btn");
-const todosDiv = document.getElementsByClassName("todos")[0];
+const todosDiv = document.getElementsById("todos")[0];
 const input = document.getElementById("todo");
 
 btn.addEventListener("click", () => {
-  // console.log("clicked");
-  // console.log(input.value);
-  const newTodo = document.createElement("p");
-  const todo = document.createTextNode(input.value);
+  const newToDoDiv = document.createElement("div");
+  const newParagraph = document.createElement("p");
+  const todoText = document.createTextNode(input.value);
   const newButton = document.createElement("button");
-  const btnText = document.createTextNode("delete");
-  newTodo.appendChild(todo);
-  newButton.appendChild(btnText);
-  todosDiv.appendChild(newTodo);
-  todosDiv.appendChild(newButton);
+
+  newParagraph.appendChild(todoText);
+  newButton.textContent = "Delete";
+  newButton.className = "delete";
+
+  newToDoDiv.appendChild(newParagraph);
+  newToDoDiv.appendChild(newButton);
+
+  todosDiv.appendChild(newToDoDiv);
+  input.value = "";
+});
+
+todosDiv.addEventListener("click", (evt) => {
+  if (evt.target.className === "delete") {
+    evt.target.parentElement.remove();
+  }
 });
